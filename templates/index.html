@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{info['name']}}</title>
+    <meta name="description" content="{{info['desc']}}">
+    <meta name="author" content="mktia">
+    <meta name="Keywords" content="Amazon Prime Video, 閲覧期間, 配信終了">
+    <meta name="theme-color" content="#232f3e">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{info['desc']}}">
+    <meta property="og:title" content="{{info['name']}}">
+    <meta property="og:url" content="{{info['url']}}">
+    <meta property="og:image" content="../static/logo.png">
+    <meta property="og:site_name" content="{{info['name']}}">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="{{info['short_desc']}}">
+    <meta name="twitter:title" content="{{info['name']}}">
+    <meta name="twitter:url" content="{{info['url']}}">
+    <meta name="twitter:image" content="../static/logo.png">
+    <meta name="twitter:domain" content="{{info['url']}}">
+    <meta name="twitter:creator" content="@_mktia">
+    <meta name="twitter:site" content="@">
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <style>
+    body {
+        background-color: #f5f5f5;
+        font-size: 16px;
+        margin: -16px 0;
+    }
+    footer {
+        background-color: #232f3e;
+        color: #fff;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        text-align: center;
+    }
+    h1, h2 {
+        font-weight: normal;
+    }
+    header {
+        background-color: #232f3e;
+        border-bottom: 3px solid #ff9900;
+        padding-top: 16px;
+    }
+    header h1 {
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+    }
+    html {
+        background-color: #232f3e;
+    }
+    li.button {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        float: left;
+        line-height: 3;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        width: 298px;
+    }
+    section {
+        margin-bottom: 40px;
+    }
+    section h2 {
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 5px;
+        padding-left: 40px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    .ads-sp {
+        display: none;
+    }
+    .link-white a {
+        color: #fff;
+        text-decoration: none;
+    }
+    #category {
+        text-align: center;
+    }
+    #main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 930px;
+    }
+    #main a {
+        color: #000;
+        text-decoration: none;
+    }
+    @media screen and (max-width: 930px) {
+        body {
+            font-size: 15px;
+        }
+        li.button {
+            border: 1px solid #ccc;
+            float: none;
+            line-height: 3;
+            margin-right: 0;
+            width: 298px;
+        }
+        section h2 {
+            padding-left: 0;
+            text-align: center;
+        }
+        .ads-pc {
+            display: none;
+        }
+        .ads-sp {
+            display: block;
+        }
+        #main {
+            width: 300px;
+        }
+    }
+    </style>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60167522-25"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-60167522-25');
+    </script>
+</head>
+<body>
+    <header class="link-white">
+        <h1><a href="{{info['url']}}">{{info['name']}}</a></h1>
+    </header>
+    <div id="main">
+        <section id="intro">
+            <h2>はじめに</h2>
+            <p>Amazon Prime 会員、Prime Student に登録していればプライムビデオはいつでも見放題！</p>
+            <p style="font-weight: bold;">ただし、プライム会員特典の閲覧期間内ならね。</p>
+            <p>それが Amazon プライムビデオのあり方です。</p>
+            <p>プライム会員特典の対象となる作品は常に変動していて、後で見ようと思っているうちに新しいものに次々と変わっていきます。</p>
+            <p>「気付いたときには、見たかった作品がプライム会員特典から外れてしまっていた。」</p>
+            <p>そんな悲劇を招かないようにこのサイトが作られました。</p>
+            <p>良ければ活用してください。</p>
+        </section>
+        <section>
+            <h2>使い方</h2>
+            <p>下のカテゴリ一覧で見たいカテゴリを押すと、<strong>今日から 30 日以内にプライム会員特典の対象から外れる作品</strong>をピックアップしてきます。</p>
+            <p>処理が終わる前にブラウザを閉じてしまうと作品リストが作れないので、終わるまでちょっとだけ待ってください。</p>
+            </section>
+        <section>
+            <h2>免責事項</h2>
+            <p>Amazon のサイトから情報を取得していますが、あくまで 30 日以内なので明日見られなくなる可能性もあります。</p>
+            <p>アプリの利用に関して責任は負いかねますので、ご了承ください。</p>
+            <p style="font-size: 12px;">(プライム会員特典の対象から外れるのは、各作品の契約期間が切れるから。)</p>
+        </section>
+        <p style="font-size: 12px; margin-top: 20px; text-align: center;">スポンサーリンク</p>
+        <div class="ads-pc" style="margin-left: auto; margin-right: auto; width: 700px;">
+            <div style="float: left; margin-right: 14px;">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- prime-336 -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:336px;height:280px"
+                     data-ad-client="ca-pub-3718490269566520"
+                     data-ad-slot="9176129323"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <div style="float: left; margin-bottom: 30px; margin-left: 14px;">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- prime-336 -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:336px;height:280px"
+                     data-ad-client="ca-pub-3718490269566520"
+                     data-ad-slot="9176129323"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+        <div class="ads-sp">
+            <div style="background-color: #aaa; height: 250px; width: 300px;">
+            1
+            </div>
+        </div>
+        <section id="category" style="clear: left;">
+        <ul>
+        <a href="/foreign"><li class="button">洋画</li></a>
+        <a href="/japanese"><li class="button">邦画</li></a>
+        <a href="/anime"><li class="button">アニメ</li></a>
+        {# <a href="/kids-and-family"><li class="button">キッズ・ファミリー</li></a> #}
+        <a href="/music"><li class="button">音楽</li></a>
+        <a href="/tv-drama"><li class="button">テレビドラマ</li></a>
+        <a href="/documentary"><li class="button">ドキュメンタリー</li></a>
+        <a href="/tv-show"><li class="button">バラエティ</li></a>
+        <a href="/hobby"><li class="button">趣味・実用</li></a>
+        {# <a href="/idol"><li class="button">アイドル</li></a> #}
+        {# <a href="/sexy"><li class="button" style="margin-bottom: 40px;">セクシー</li></a> #}
+        </ul>
+        </section>
+    </div>
+    <footer class="link-white" style="clear: left; margin-top: 40px;">
+    <p>&copy; 2017 <a href="https://www.mktia.com">mktia</a>.</p>
+    </footer>
+</body>
+</html>

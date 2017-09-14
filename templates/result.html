@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{info['name']}}</title>
+    <meta name="description" content="{{info['desc']}}">
+    <meta name="author" content="mktia">
+    <meta name="Keywords" content="Amazon Prime Video, 閲覧期間, 配信終了">
+    <meta name="theme-color" content="#232f3e">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{info['desc']}}">
+    <meta property="og:title" content="{{info['name']}}">
+    <meta property="og:url" content="{{info['url']}}">
+    <meta property="og:image" content="../static/logo.png">
+    <meta property="og:site_name" content="{{info['name']}}">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="{{info['short_desc']}}">
+    <meta name="twitter:title" content="{{info['name']}}">
+    <meta name="twitter:url" content="{{info['url']}}">
+    <meta name="twitter:image" content="../static/logo.png">
+    <meta name="twitter:domain" content="{{info['url']}}">
+    <meta name="twitter:creator" content="@_mktia">
+    <meta name="twitter:site" content="@">
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <style>
+    body {
+        background-color: #f5f5f5;
+        font-size: 16px;
+        margin: -16px 0;
+    }
+    footer {
+        background-color: #232f3e;
+        color: #fff;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        text-align: center;
+    }
+    h1, h2 {
+        font-weight: normal;
+    }
+    header {
+        background-color: #232f3e;
+        border-bottom: 3px solid #ff9900;
+        padding-top: 16px;
+    }
+    header h1 {
+        color: #fff;
+        font-size: 24px;
+        text-align: center;
+    }
+    html {
+        background-color: #232f3e;
+    }
+    li.button {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        float: left;
+        line-height: 3;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        width: 298px;
+    }
+    section {
+        margin-bottom: 40px;
+    }
+    section h2 {
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 5px;
+        padding-left: 40px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    .ads-sp {
+        display: none;
+    }
+    .link-white a {
+        color: #fff;
+        text-decoration: none;
+    }
+    #category {
+        text-align: center;
+    }
+    #main {
+        margin-left: auto;
+        margin-right: auto;
+        width: 930px;
+    }
+    #main a {
+        color: #000;
+        //text-decoration: none;
+    }
+    @media screen and (max-width: 930px) {
+        body {
+            font-size: 15px;
+        }
+        li.button {
+            border: 1px solid #ccc;
+            float: none;
+            line-height: 3;
+            margin-right: 0;
+            width: 298px;
+        }
+        section h2 {
+            padding-left: 0;
+            text-align: center;
+        }
+        .ads-pc {
+            display: none;
+        }
+        .ads-sp {
+            display: block;
+        }
+        #main {
+            width: 300px;
+        }
+    }
+    </style>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60167522-25"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-60167522-25');
+    </script>
+</head>
+<body>
+    <header class="link-white">
+        <h1><a href="{{info['url']}}">{{info['name']}}</a></h1>
+    </header>
+    <div id="main">
+        <section>
+            <h2>検索結果</h2>
+            {% if list['num'] == 0 %}
+            <p>プライム会員特典での視聴が終了する作品はありませんでした。</p>
+            {% else %}
+            {% for i in range(list['num']) %}
+            <p><a href="{{list['urls'][i]}}">{{list['titles'][i]|safe}}</a></p>
+            {% if i != 0 and (i + 1) % 10 == 0 %}
+            <p style="font-size: 12px; margin-top: 20px; text-align: center;">スポンサーリンク</p>
+            <div class="ads-pc" style="margin-left: auto; margin-right: auto; width: 700px;">
+                <div style="float: left; margin-right: 14px;">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- prime-336 -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:336px;height:280px"
+                         data-ad-client="ca-pub-3718490269566520"
+                         data-ad-slot="9176129323"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div style="float: left; margin-bottom: 10px; margin-left: 14px;">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- prime-336 -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:336px;height:280px"
+                         data-ad-client="ca-pub-3718490269566520"
+                         data-ad-slot="9176129323"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <div class="ads-sp">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- prime-300 -->
+                <ins class="adsbygoogle"
+                     style="display:inline-block;width:300px;height:250px"
+                     data-ad-client="ca-pub-3718490269566520"
+                     data-ad-slot="1304134896"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <p style="border-bottom: 1px dotted #aaa; color: #aaa; clear: left;">{{i+1}}</p>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </section>
+    </div>
+    <footer class="link-white" style="clear: left; margin-top: 40px;">
+        <p>&copy; 2017 <a href="https://www.mktia.com">mktia</a>.</p>
+    </footer>
+</body>
+</html>
