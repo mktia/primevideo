@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 info = {
     'name' : 'プライムビデオ閲覧期限まとめ',
-    'url' : 'http://primevideo.mktia.com',
+    'url' : 'http://prime-video.mktia.com',
     'desc' : 'あの映画の閲覧期間はいつまで？もうすぐプライム会員特典で見られなくなるプライムビデオを一覧にまとめました。',
     'short_desc' : 'もうすぐ見られなくなるプライムビデオまとめ',
     }
@@ -16,14 +16,15 @@ info = {
 base_url = 'www.amazon.co.jp'
 connect = http.client.HTTPSConnection(base_url)
 
-# Lists to save
-list = {}
-title_list = []
-url_list = []
 
 is_finish = False
 
 def make_list(word):
+    # Lists to save
+    list = {}
+    title_list = []
+    url_list = []
+
     page = 1
     keyword = urllib.parse.quote(word)
     while(True):
@@ -92,7 +93,6 @@ def make_foreign_list():
 
 @app.route('/japanese')
 def make_japanese_list():
-    japanese_query = '/s?rh=n%3A4217521051%2Cn%3A2478493051&bbn=4217521051&ie=UTF8&page='
     japanese_list = make_list('日本映画')
     return render_template('result.html', category='邦画', list=japanese_list, info=info)
 
@@ -145,7 +145,7 @@ def make_sexy_list():
     return render_template('result.html', category='セクシー', list=sexy_list, info=info)
 
     
-@app.route('/end')
+#@app.route('/end')
 def end():
     exit()
 
