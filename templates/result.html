@@ -6,7 +6,7 @@
     <![endif]-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{info['name']}}</title>
+    <title>{{category}}|{{info['name']}}</title>
     <meta name="description" content="{{info['desc']}}">
     <meta name="author" content="mktia">
     <meta name="Keywords" content="Amazon Prime Video, 閲覧期間, 配信終了">
@@ -138,7 +138,7 @@
     </header>
     <div id="main">
         <section>
-            <h2>検索結果</h2>
+            <h2>{{category}}</h2>
             {% if list['num'] == 0 %}
             <p>プライム会員特典での視聴が終了する作品はありませんでした。</p>
             {% else %}
