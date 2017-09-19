@@ -7,7 +7,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 info = {
-    'name' : 'プライムビデオ閲覧期限まとめ',
+    'name' : 'プライムビデオ配信終了まとめ',
     'url' : 'http://prime-video.mktia.com',
     'desc' : 'あの映画の閲覧期間はいつまで？もうすぐプライム会員特典で見られなくなるプライムビデオを一覧にまとめました。',
     'short_desc' : 'もうすぐ見られなくなるプライムビデオまとめ',
